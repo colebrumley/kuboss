@@ -12,6 +12,6 @@ This container is meant to bind to 0.0.0.0, **not** expose ports, and use Flanne
 
 For testing, I spun up an instance of `elcolio/etcd` and got it's IP using `docker inspect -f '{{.NetworkSettings.IPAddress}}' etcd`:
 ```sh
-docker run -d --name kube -e KUBE_ETCD_SERVERS=http://172.17.0.49:4001 -e KUBE_API_ADDRESS=0.0.0.0 elcolio/kuboss
+docker run -d --name kube -e KUBE_ETCD_SERVERS=http://172.17.0.49:4001 elcolio/kuboss
 ```
 *See the Dockerfile for a complete list of ENV vars*
