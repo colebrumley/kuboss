@@ -14,4 +14,8 @@ For testing, I spun up an instance of `elcolio/etcd` and got it's IP using `dock
 ```sh
 docker run -d --name kube -e KUBE_ETCD_SERVERS=http://172.17.0.49:4001 elcolio/kuboss
 ```
-*See the Dockerfile for a complete list of ENV vars*
+In addition to the ENVs mentioned in the Dockerfile, the container can also use:
+  - API_ARGS
+  - CONTROLLER_MANAGER_ARGS
+  - SCHEDULER_ARGS
+  - KUBELET_ADDRESSES
